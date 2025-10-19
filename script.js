@@ -66,7 +66,11 @@ function renderCategories() {
 
             // Close sidebar on mobile after clicking
             if (window.innerWidth <= 768) {
-                document.getElementById('sidebar').classList.remove('active');
+                const sidebar = document.getElementById('sidebar');
+                const backdrop = document.getElementById('sidebarBackdrop');
+                sidebar.classList.remove('active');
+                backdrop.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     });
@@ -168,19 +172,28 @@ function setupEventListeners() {
     // Sidebar toggle for mobile
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebar = document.getElementById('sidebar');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+    const sidebarClose = document.getElementById('sidebarClose');
 
+    // Open sidebar
     sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+        sidebar.classList.add('active');
+        sidebarBackdrop.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     });
 
-    // Close sidebar when clicking outside on mobile
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
-                sidebar.classList.remove('active');
-            }
-        }
-    });
+    // Close sidebar function
+    const closeSidebar = () => {
+        sidebar.classList.remove('active');
+        sidebarBackdrop.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    };
+
+    // Close sidebar with close button
+    sidebarClose.addEventListener('click', closeSidebar);
+
+    // Close sidebar when clicking backdrop
+    sidebarBackdrop.addEventListener('click', closeSidebar);
 
     // Popup close button
     const popupClose = document.querySelector('.popup-close');
