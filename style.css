@@ -145,6 +145,20 @@ header h1 {
     min-width: 0;
 }
 
+/* Disclaimer Note */
+.disclaimer-note {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.disclaimer-note p {
+    font-size: 0.75rem;
+    color: #999999;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
 /* Category Section */
 .category-section {
     margin-bottom: 5rem;
