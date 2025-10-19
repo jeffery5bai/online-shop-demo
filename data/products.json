@@ -118,7 +118,7 @@
         "status": "舊（古著）",
         "notes": "整體配色好看；領口泛黃",
         "price": 50,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 12,
@@ -140,7 +140,7 @@
         "status": "舊（以前常穿）",
         "notes": null,
         "price": 100,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 14,
@@ -173,7 +173,7 @@
         "status": "6 成新（以前偶爾穿）",
         "notes": "很漂亮的紫色；右邊衣角稍微褪色",
         "price": 50,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 17,
@@ -239,7 +239,7 @@
         "status": "舊（以前常穿）",
         "notes": "衣角有點髒汙",
         "price": 100,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 23,
@@ -250,7 +250,7 @@
         "status": "舊（以前常穿）",
         "notes": null,
         "price": 50,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 24,
@@ -261,7 +261,7 @@
         "status": "舊（以前常穿）",
         "notes": null,
         "price": 50,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 25,
@@ -272,7 +272,7 @@
         "status": "舊（古著）",
         "notes": "有幾處小破洞；領扣微鬆",
         "price": 50,
-        "sale_status": "open"
+        "sale_status": "sold"
     },
     {
         "id": 26,
