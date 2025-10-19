@@ -97,11 +97,18 @@ function renderProducts() {
 
     // Add click handlers for product cards
     document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            // Don't open popup if clicking the copy button
+            if (e.target.closest('.copy-btn')) {
+                return;
+            }
             const productId = card.dataset.productId;
             showPopup(productId);
         });
     });
+
+    // Add click handlers for copy buttons
+    setupCopyButtons();
 }
 
 // Render individual product card
@@ -121,11 +128,22 @@ function renderProductCard(product) {
     // Format price
     const price = product.price ? `NT$ ${product.price}` : '';
 
+    // Add product number to name
+    const productNameWithNumber = `#${product.id} ${product.name}`;
+
     return `
         <div class="product-card" data-product-id="${product.id}">
             <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23ccc%22%3ENo Image%3C/text%3E%3C/svg%3E'">
             <div class="product-info">
-                <div class="product-name">${product.name}</div>
+                <div class="product-name-container">
+                    <div class="product-name">${productNameWithNumber}</div>
+                    <button class="copy-btn" data-copy-text="${productNameWithNumber}" title="複製商品名稱" aria-label="複製商品名稱">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M3 10.5V3C3 2.44772 3.44772 2 4 2H10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
                 ${price ? `<div class="product-price">${price}</div>` : ''}
                 <div class="product-spec">${product.specification}</div>
                 ${tags ? `<div class="product-tags">${tags}</div>` : ''}
@@ -165,6 +183,49 @@ function closePopup() {
     const popup = document.getElementById('popup');
     popup.classList.remove('active');
     document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Setup copy buttons
+function setupCopyButtons() {
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', async (e) => {
+            e.stopPropagation(); // Prevent product card click
+            const textToCopy = button.dataset.copyText;
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+
+                // Visual feedback - change icon temporarily
+                const originalHTML = button.innerHTML;
+                button.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+                button.classList.add('copied');
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copied');
+                }, 1500);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    button.classList.add('copied');
+                    setTimeout(() => button.classList.remove('copied'), 1500);
+                } catch (err2) {
+                    console.error('Fallback copy failed:', err2);
+                }
+                document.body.removeChild(textArea);
+            }
+        });
+    });
 }
 
 // Setup event listeners

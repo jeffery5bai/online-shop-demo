@@ -206,13 +206,57 @@ header h1 {
     padding: 0 0.5rem 1rem 0.5rem;
 }
 
+.product-name-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .product-name {
     font-weight: 400;
     font-size: 0.875rem;
-    margin-bottom: 0.5rem;
     color: #1a1a1a;
     line-height: 1.4;
     letter-spacing: 0.3px;
+    flex: 1;
+}
+
+.copy-btn {
+    background: none;
+    border: 1px solid #e0e0e0;
+    padding: 0.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #999999;
+    color: #1a1a1a;
+}
+
+.copy-btn:active {
+    transform: scale(0.9);
+}
+
+.copy-btn.copied {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.copy-btn svg {
+    width: 14px;
+    height: 14px;
 }
 
 .product-price {
@@ -397,6 +441,16 @@ header h1 {
 
     .product-name {
         font-size: 0.8rem;
+    }
+
+    .copy-btn {
+        width: 22px;
+        height: 22px;
+    }
+
+    .copy-btn svg {
+        width: 12px;
+        height: 12px;
     }
 
     .product-price {
