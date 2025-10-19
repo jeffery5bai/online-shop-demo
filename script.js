@@ -131,12 +131,19 @@ function renderProductCard(product) {
     // Add product number to name
     const productNameWithNumber = `#${product.id} ${product.name}`;
 
+    // Check if product is sold
+    const isSold = product.sale_status === 'sold';
+    const soldClass = isSold ? 'sold' : '';
+
     return `
-        <div class="product-card" data-product-id="${product.id}">
-            <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23ccc%22%3ENo Image%3C/text%3E%3C/svg%3E'">
+        <div class="product-card ${soldClass}" data-product-id="${product.id}">
+            <div class="product-image-container">
+                <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23ccc%22%3ENo Image%3C/text%3E%3C/svg%3E'">
+                ${isSold ? '<div class="sold-overlay"><span class="sold-badge">已售出</span></div>' : ''}
+            </div>
             <div class="product-info">
                 <div class="product-name-container">
-                    <div class="product-name">${productNameWithNumber}</div>
+                    <div class="product-name ${isSold ? 'strikethrough' : ''}">${productNameWithNumber}</div>
                     <button class="copy-btn" data-copy-text="${productNameWithNumber}" title="複製商品名稱" aria-label="複製商品名稱">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>

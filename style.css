@@ -194,12 +194,60 @@ header h1 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+.product-image-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
 .product-image {
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
     background-color: #f8f8f8;
-    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Sold Overlay */
+.sold-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.sold-badge {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Strikethrough for sold product names */
+.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Sold product card styling */
+.product-card.sold {
+    opacity: 0.8;
+}
+
+.product-card.sold:hover {
+    transform: none;
+    box-shadow: none;
+    cursor: default;
 }
 
 .product-info {
@@ -463,6 +511,12 @@ header h1 {
 
     .product-tags {
         font-size: 0.65rem;
+    }
+
+    .sold-badge {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        letter-spacing: 1px;
     }
 
     .popup-details {
