@@ -1,10 +1,8 @@
-# Bai's Give Away 二手衣物
+# Bai's Secondhand Clothes 二手衣物
+
+An experimental simple demo website to display secondhand clothes for sales with friends via vibe coding.
 
 A minimalist black-and-white website for displaying second-hand clothing items with elegant serif typography.
-
-## Live Demo
-
-Visit the live site: [Coming soon after GitHub Pages setup]
 
 ## How to Run Locally
 
@@ -54,15 +52,29 @@ online-shop-demo/
 ├── script.js           # JavaScript functionality
 ├── data/
 │   └── products.json   # Product data (26 items)
-└── photos/             # Product images (add your photos here)
+└── photos/             # Product images (1.jpg through 26.jpg)
     ├── 1.jpg
     ├── 2.jpg
-    └── ...
+    └── ... (through 26.jpg)
 ```
 
-## Adding Product Photos
+## Features
 
-Add your product photos to the `photos/` folder with filenames matching the product IDs:
-- `1.jpg`, `2.jpg`, `3.jpg`, etc.
+- **Product Display**: 26 secondhand clothing items with photos
+- **Category Filtering**: Browse by category (褲子, 外套, 長袖襯衫, etc.)
+- **Product Numbers**: Easy reference with product IDs (#1, #2, etc.)
+- **Copy Button**: Click to copy product names to clipboard
+- **Sale Status Tracking**: Products can be marked as "sold" or "open"
+- **Measurement Disclaimer**: "不專業尺碼測量，實際皆可能稍有誤差"
+- **Responsive Design**: Works on desktop and mobile devices
+- **Mobile Sidebar**: Floating toggle button with backdrop overlay
 
-The website will automatically display them!
+## Managing Products
+
+Edit `data/products.json` to:
+- Add or remove products
+- Update prices and specifications
+- Mark items as sold by changing `"sale_status": "sold"`
+- Categorize items
+
+Product photos should be added to the `photos/` folder with filenames matching product IDs (e.g., `1.jpg`, `2.jpg`, etc.).
