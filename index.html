@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai's Give Away 二手衣物</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bai's Give Away 二手衣物</h1>
+    </header>
+
+    <!-- Sidebar Toggle Button (Mobile) -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰ Categories</button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <h2>Categories</h2>
+            <nav id="categoryNav">
+                <!-- Categories will be populated by JavaScript -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="productContainer">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <img id="popupImage" src="" alt="Product Image">
+            <div class="popup-details">
+                <h3 id="popupName"></h3>
+                <p><strong>Status:</strong> <span id="popupStatus"></span></p>
+                <p><strong>Notes:</strong> <span id="popupNotes"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
