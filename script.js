@@ -113,11 +113,15 @@ function renderProductCard(product) {
         }
     }
 
+    // Format price
+    const price = product.price ? `NT$ ${product.price}` : '';
+
     return `
         <div class="product-card" data-product-id="${product.id}">
-            <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%23f5f5f5%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3ENo Image%3C/text%3E%3C/svg%3E'">
+            <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23ccc%22%3ENo Image%3C/text%3E%3C/svg%3E'">
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
+                ${price ? `<div class="product-price">${price}</div>` : ''}
                 <div class="product-spec">${product.specification}</div>
                 ${tags ? `<div class="product-tags">${tags}</div>` : ''}
             </div>

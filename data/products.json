@@ -6,7 +6,8 @@
         "name":"Sense of Place 深灰棉紡西裝窄褲",
         "specification":" L 號，褲長 100cm，腰寬 32 吋",
         "status":"6 成新（以前偶爾穿）",
-        "notes":"鬆緊腰帶、材質保暖"
+        "notes":"鬆緊腰帶、材質保暖",
+        "price": 200
     },
     {
         "id":2,
@@ -15,7 +16,8 @@
         "name":"AMG 黑色窄管西裝褲",
         "specification":"褲長 110cm，腰寬 31 吋",
         "status":"9 成新（穿過 <3 次）",
-        "notes":"長褲管（蓋鞋子）"
+        "notes":"長褲管（蓋鞋子）",
+        "price": 100
     },
     {
         "id":3,
@@ -24,7 +26,8 @@
         "name":"Urban Research 黑色繭型九分西裝褲",
         "specification":"L 號，褲長 93cm，腰寬 30 吋",
         "status":"8 成新（少穿）",
-        "notes":"細格暗紋"
+        "notes":"細格暗紋",
+        "price": 200
     },
     {
         "id":4,
@@ -33,7 +36,8 @@
         "name":"Urban Research 黑色棉紡修身九分褲",
         "specification":"L 號，褲長 95cm，腰寬 32 吋",
         "status":"8 成新（少穿）",
-        "notes":"彈性材質"
+        "notes":"彈性材質",
+        "price": 200
     },
     {
         "id":5,
@@ -42,7 +46,8 @@
         "name":"Uniqlo 藍色直筒刷白牛仔褲",
         "specification":"褲長 96cm，腰寬 32 吋",
         "status":"舊（以前常穿）",
-        "notes":"褲腳有污漬"
+        "notes":"褲腳有污漬",
+        "price": 50
     },
     {
         "id":6,
@@ -51,7 +56,8 @@
         "name":"咖啡寬筒褶皺西裝褲",
         "specification":"XL 號，褲長 102cm，腰寬 33 吋",
         "status":"全新（沒穿出門過）",
-        "notes":"褲管真的蠻寬的"
+        "notes":"褲管真的蠻寬的",
+        "price": 200
     },
     {
         "id":7,
@@ -60,7 +66,8 @@
         "name":"黑色微喇叭牛仔褲",
         "specification":"XL 號，褲長 105cm，腰寬 32 吋",
         "status":"8 成新（少穿）",
-        "notes":"這件蠻帥的"
+        "notes":"這件蠻帥的",
+        "price": 200
     },
     {
         "id":8,
@@ -69,7 +76,8 @@
         "name":"海軍藍防風衛衣外套",
         "specification":"XXL 號，衣長 72cm",
         "status":"9 成新（穿過 <5 次）",
-        "notes":"防風防水，但不透氣，很大件！"
+        "notes":"防風防水，但不透氣，很大件！",
+        "price": 200
     },
     {
         "id":9,
@@ -78,7 +86,8 @@
         "name":"綠色格紋棉質襯衫",
         "specification":"XL 號，衣長 72cm",
         "status":"9 成新（穿過 <5 次）",
-        "notes":null
+        "notes":null,
+        "price": 100
     },
     {
         "id":10,
@@ -87,7 +96,8 @@
         "name":"菜籃配色直條紋襯衫",
         "specification":"XXL 號，衣長 75cm",
         "status":"8 成新（少穿）",
-        "notes":"顏色好看但可能被笑；領口小部分褪色"
+        "notes":"顏色好看但可能被笑；領口小部分褪色",
+        "price": 100
     },
     {
         "id":11,
@@ -96,7 +106,8 @@
         "name":"低彩撞色直條紋襯衫",
         "specification":"XL 號，衣長 66cm",
         "status":"舊（古著）",
-        "notes":"整體配色好看；領口泛黃"
+        "notes":"整體配色好看；領口泛黃",
+        "price": 50
     },
     {
         "id":12,
@@ -105,7 +116,8 @@
         "name":"Uniqlo 灰白色工作襯衫",
         "specification":"XL 號，衣長 72cm",
         "status":"6 成新（以前偶爾穿）",
-        "notes":"領口一點點泛黃"
+        "notes":"領口一點點泛黃",
+        "price": 50
     },
     {
         "id":13,
@@ -114,7 +126,8 @@
         "name":"咖啡燈芯絨厚磅襯衫",
         "specification":"XL 號，衣長 66cm",
         "status":"舊（以前常穿）",
-        "notes":null
+        "notes":null,
+        "price": 100
     },
     {
         "id":14,
@@ -123,7 +136,8 @@
         "name":"迪卡儂深藍色透氣運動 polo 衫",
         "specification":"XL 號，衣長 70cm",
         "status":"9 成新（穿過 <3 次）",
-        "notes":null
+        "notes":null,
+        "price": 100
     },
     {
         "id":15,
@@ -132,7 +146,8 @@
         "name":"NIKE 淺灰色棉紡 polo 衫",
         "specification":"XL 號，衣長 70cm",
         "status":"9 成新（穿過 <3 次）",
-        "notes":null
+        "notes":null,
+        "price": 200
     },
     {
         "id":16,
@@ -141,7 +156,8 @@
         "name":"紫色 Oversized 厚磅襯衫",
         "specification":"XXL 號，衣長 78cm",
         "status":"6 成新（以前偶爾穿）",
-        "notes":"很漂亮的紫色；右邊衣角稍微褪色"
+        "notes":"很漂亮的紫色；右邊衣角稍微褪色",
+        "price": 50
     },
     {
         "id":17,
@@ -150,7 +166,8 @@
         "name":"淺灰色落肩薄長袖",
         "specification":"XL 號，衣長 70cm",
         "status":"6 成新（以前偶爾穿）",
-        "notes":null
+        "notes":null,
+        "price": 100
     },
     {
         "id":18,
@@ -159,7 +176,8 @@
         "name":"彈力白色螺紋背心",
         "specification":"L 號，衣長 60cm",
         "status":"9 成新（穿過 <3 次）",
-        "notes":null
+        "notes":null,
+        "price": 50
     },
     {
         "id":19,
@@ -168,7 +186,8 @@
         "name":"Radiohead 樂團背心",
         "specification":"XL 號，衣長 72cm",
         "status":"8 成新（少穿）",
-        "notes":"自己剪的背心；很大件"
+        "notes":"自己剪的背心；很大件",
+        "price": 100
     },
     {
         "id":20,
@@ -177,7 +196,8 @@
         "name":"黑色落肩刷毛大學 T",
         "specification":"XXL 號，衣長 72cm",
         "status":"6 成新（以前偶爾穿）",
-        "notes":null
+        "notes":null,
+        "price": 100
     },
     {
         "id":21,
@@ -186,7 +206,8 @@
         "name":"Niko and ... 撞色款大學 T",
         "specification":"XL 號，衣長 70cm",
         "status":"6 成新（以前偶爾穿）",
-        "notes":"背面有毛球瑕疵"
+        "notes":"背面有毛球瑕疵",
+        "price": 100
     },
     {
         "id":22,
@@ -195,7 +216,8 @@
         "name":"Carhartt 灰藍色厚磅短 T",
         "specification":"XL 號，衣長 70cm",
         "status":"舊（以前常穿）",
-        "notes":"衣角有點髒汙"
+        "notes":"衣角有點髒汙",
+        "price": 100
     },
     {
         "id":23,
@@ -204,7 +226,8 @@
         "name":"海軍藍五分袖短 T",
         "specification":"XL 號，衣長 72cm",
         "status":"舊（以前常穿）",
-        "notes":null
+        "notes":null,
+        "price": 50
     },
     {
         "id":24,
@@ -213,7 +236,8 @@
         "name":"Nirvana 樂團短 T",
         "specification":"XL 號，衣長 72cm",
         "status":"舊（以前常穿）",
-        "notes":null
+        "notes":null,
+        "price": 50
     },
     {
         "id":25,
@@ -222,7 +246,8 @@
         "name":"Carhartt 復古紅厚磅短 T",
         "specification":"L 號，衣長 72 cm",
         "status":"舊（古著）",
-        "notes":"有幾處小破洞；領扣微鬆"
+        "notes":"有幾處小破洞；領扣微鬆",
+        "price": 50
     },
     {
         "id":26,
@@ -231,6 +256,7 @@
         "name":"淺灰色五分袖短 T",
         "specification":"XL 號，衣長 72cm",
         "status":"舊（以前常穿）",
-        "notes":null
+        "notes":null,
+        "price": 50
     }
 ]

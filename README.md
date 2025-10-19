@@ -1,6 +1,12 @@
 # Bai's Give Away 二手衣物
 
-## How to Run
+A minimalist black-and-white website for displaying second-hand clothing items with elegant serif typography.
+
+## Live Demo
+
+Visit the live site: [Coming soon after GitHub Pages setup]
+
+## How to Run Locally
 
 **IMPORTANT:** This website must be run from a web server, not by opening index.html directly in the browser (file:// protocol won't work due to CORS restrictions when loading JSON files).
 

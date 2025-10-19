@@ -6,28 +6,29 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: #ffffff;
-    color: #000000;
-    line-height: 1.6;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
 }
 
 /* Header */
 header {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1a1a1a;
     text-align: center;
-    padding: 1.5rem 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 3px solid #ffffff;
+    padding: 2.5rem 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 4px;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 8px;
     text-transform: uppercase;
-    font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 /* Sidebar Toggle Button */
@@ -37,13 +38,16 @@ header h1 {
     top: 1rem;
     left: 1rem;
     z-index: 1001;
-    background-color: #000000;
+    background-color: #1a1a1a;
     color: #ffffff;
     border: none;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.25rem;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar-toggle:hover {
@@ -61,38 +65,41 @@ header h1 {
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: 220px;
     position: sticky;
     top: 2rem;
     height: fit-content;
-    border-right: 1px solid #e0e0e0;
-    padding-right: 2rem;
+    border-right: 1px solid #e8e8e8;
+    padding-right: 2.5rem;
 }
 
 .sidebar h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: #1a1a1a;
 }
 
 .sidebar nav {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 .sidebar nav a {
-    color: #000000;
+    color: #666666;
     text-decoration: none;
-    padding: 0.5rem 0;
-    transition: color 0.2s;
-    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .sidebar nav a:hover {
-    color: #666666;
+    color: #1a1a1a;
 }
 
 /* Main Content */
@@ -103,69 +110,82 @@ header h1 {
 
 /* Category Section */
 .category-section {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .category-title {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #999999;
-    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 0.5rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 /* Product Card */
 .product-card {
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border: none;
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .product-image {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 3/4;
     object-fit: cover;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
+    margin-bottom: 1rem;
 }
 
 .product-info {
-    padding: 1rem;
+    padding: 0 0.5rem 1rem 0.5rem;
 }
 
 .product-name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-    color: #000000;
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+.product-price {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .product-spec {
-    font-size: 0.85rem;
-    color: #666666;
-    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    color: #888888;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.2px;
+    font-weight: 300;
 }
 
 .product-tags {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #999999;
-    font-style: italic;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 /* Popup Modal */
@@ -252,8 +272,8 @@ header h1 {
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
     }
 
     .sidebar-toggle {
@@ -262,7 +282,7 @@ header h1 {
 
     .container {
         flex-direction: column;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
     }
 
     .sidebar {
@@ -285,23 +305,27 @@ header h1 {
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .product-info {
-        padding: 0.75rem;
+        padding: 0 0.25rem 0.75rem 0.25rem;
     }
 
     .product-name {
-        font-size: 0.9rem;
-    }
-
-    .product-spec {
         font-size: 0.8rem;
     }
 
+    .product-price {
+        font-size: 0.8rem;
+    }
+
+    .product-spec {
+        font-size: 0.7rem;
+    }
+
     .product-tags {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
 
     .popup-details {
@@ -316,15 +340,16 @@ header h1 {
 /* Very small screens */
 @media (max-width: 480px) {
     header {
-        padding: 1.5rem 0.5rem;
+        padding: 2rem 0.5rem;
     }
 
     header h1 {
-        font-size: 1.4rem;
-        letter-spacing: 1.5px;
+        font-size: 1.25rem;
+        letter-spacing: 3px;
     }
 
     .category-title {
-        font-size: 1.2rem;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
     }
 }
