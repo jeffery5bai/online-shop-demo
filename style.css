@@ -16,19 +16,20 @@ body {
 /* Header */
 header {
     background-color: #ffffff;
-    color: #1a1a1a;
+    color: #0a0a0a;
     text-align: center;
     padding: 2.5rem 1rem;
     margin-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 2px solid #000000;
 }
 
 header h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 8px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 6px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
+    color: #0a0a0a;
 }
 
 /* Sidebar Toggle Button */
@@ -272,8 +273,9 @@ header h1 {
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
-        letter-spacing: 4px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 3px;
     }
 
     .sidebar-toggle {
@@ -344,8 +346,9 @@ header h1 {
     }
 
     header h1 {
-        font-size: 1.25rem;
-        letter-spacing: 3px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
     }
 
     .category-title {
