@@ -102,9 +102,7 @@ function renderProducts() {
 
 // Render individual product card
 function renderProductCard(product) {
-    // Try both .JPG and .jpg extensions
-    const imagePath = `photos/${product.id}.JPG`;
-    const fallbackPath = `photos/${product.id}.jpg`;
+    const imagePath = `photos/${product.id}.jpg`;
 
     // Handle tags - could be null, string, or array
     let tags = '';
@@ -121,7 +119,7 @@ function renderProductCard(product) {
 
     return `
         <div class="product-card" data-product-id="${product.id}">
-            <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.onerror=null; this.src='${fallbackPath}';">
+            <img src="${imagePath}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23ccc%22%3ENo Image%3C/text%3E%3C/svg%3E'">
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 ${price ? `<div class="product-price">${price}</div>` : ''}
@@ -144,17 +142,11 @@ function showPopup(productId) {
     const popupStatus = document.getElementById('popupStatus');
     const popupNotes = document.getElementById('popupNotes');
 
-    const imagePath = `photos/${product.id}.JPG`;
+    const imagePath = `photos/${product.id}.jpg`;
 
     popupImage.src = imagePath;
     popupImage.onerror = function() {
-        // Try lowercase .jpg first
-        if (this.src.endsWith('.JPG')) {
-            this.src = `photos/${product.id}.jpg`;
-        } else {
-            // If both fail, show placeholder
-            this.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22600%22%3E%3Crect width=%22600%22 height=%22600%22 fill=%22%23f5f5f5%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%23999%22%3ENo Image Available%3C/text%3E%3C/svg%3E';
-        }
+        this.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22600%22%3E%3Crect width=%22600%22 height=%22600%22 fill=%22%23f5f5f5%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%23999%22%3ENo Image Available%3C/text%3E%3C/svg%3E';
     };
     popupName.textContent = product.name;
     popupStatus.textContent = product.status || '可索取';
