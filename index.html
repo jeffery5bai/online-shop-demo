@@ -47,7 +47,12 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="popup-close">&times;</span>
-            <img id="popupImage" src="" alt="Product Image">
+            <div class="popup-image-container">
+                <img id="popupImage" src="" alt="Product Image">
+                <div id="popupSoldBadge" class="popup-sold-badge" style="display: none;">
+                    <span>已售出</span>
+                </div>
+            </div>
             <div class="popup-details">
                 <h3 id="popupName"></h3>
                 <p><strong>Status:</strong> <span id="popupStatus"></span></p>

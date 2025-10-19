@@ -170,6 +170,7 @@ function showPopup(productId) {
     const popupName = document.getElementById('popupName');
     const popupStatus = document.getElementById('popupStatus');
     const popupNotes = document.getElementById('popupNotes');
+    const popupSoldBadge = document.getElementById('popupSoldBadge');
 
     const imagePath = `photos/${product.id}.jpg`;
 
@@ -180,6 +181,13 @@ function showPopup(productId) {
     popupName.textContent = product.name;
     popupStatus.textContent = product.status || '可索取';
     popupNotes.textContent = product.notes || '無備註';
+
+    // Show or hide sold badge in popup
+    if (product.sale_status === 'sold') {
+        popupSoldBadge.style.display = 'flex';
+    } else {
+        popupSoldBadge.style.display = 'none';
+    }
 
     popup.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
